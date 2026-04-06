@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+        
+        //------------------------------
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="设备配置信息"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/edit1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Key"
+                android:text="a1hKq8J0y7h"
+                android:textSize="15sp"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="8dp"></EditText>
+
+
+            <EditText
+                android:id="@+id/edit2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Device Name"
+                android:text="my_device_app"
+                android:textSize="15sp"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="8dp"></EditText>
+
+
+            <EditText
+                android:id="@+id/edit3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Device Secret"
+                android:text="3310d98abcb66c267ed35f3c1ad7f0bb"
+                android:textSize="15sp"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="12dp"></EditText>
+
+            <Button
+                android:id="@+id/activate_button0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="配置设备"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_primary"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/msgTextView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="配置：失败"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/msgTextView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="连接：失败"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+        </LinearLayout>
+        //------------------------------
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="设备状态信息"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/msgTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="同步：000"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"></TextView>
+
+            <TextView
+                android:id="@+id/msgTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="状态：正常"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"></TextView>
+            <TextView
+                android:id="@+id/msgTextView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="门锁：OFF"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"></TextView>
+            <TextView
+                android:id="@+id/msgTextView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="旋转：000"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"></TextView>
+            <TextView
+                android:id="@+id/msgTextView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PM25：000"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"></TextView>
+
+            <TextView
+                android:id="@+id/msgTextView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="光照：000"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"></TextView>
+
+            <TextView
+                android:id="@+id/msgTextView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="风扇：OFF"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"></TextView>
+            <TextView
+                android:id="@+id/msgTextView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="加湿：OFF"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"></TextView>
+            <TextView
+                android:id="@+id/msgTextView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="红外：无人"
+                android:textColor="#FFFF55"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"></TextView>
+            <TextView
+                android:id="@+id/msgTextView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="状态：正常"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"></TextView>
+            <TextView
+                android:id="@+id/msgTextView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="模式：自动"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:textSize="16sp"></TextView>
+        </LinearLayout>
+        
+        //------------------------------
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="设备控制"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <Button
+                    android:id="@+id/activate_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="连接设备"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_primary"
+                    android:layout_marginEnd="8dp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/log_view_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="查看日志"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_secondary"
+                    android:layout_marginStart="8dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/post_button2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/button_control"
+                    android:textColor="#000000"
+                    android:text="开关"/>
+
+                <Button
+                    android:id="@+id/post_button3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/button_control"
+                    android:textColor="#000000"
+                    android:visibility="gone"
+                    android:text="加"/>
+
+                <Button
+                    android:id="@+id/post_button4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:visibility="gone"
+                    android:background="@drawable/button_control"
+                    android:textColor="#000000"
+                    android:text="减"/>
+
+                <Button
+                    android:id="@+id/post_button1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:visibility="gone"
+                    android:background="@drawable/button_control"
+                    android:textColor="#000000"
+                    android:text="模式"/>
+
+                <Button
+                    android:id="@+id/log_clear_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:text="清空日志"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_danger"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        //------------------------------
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:ellipsize="none"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/msgTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="消息日志"
+                android:textColor="#E91E63"
+                android:textSize="18sp"></TextView>
+
+
+        </LinearLayout>
+        //------------------------------
+    </LinearLayout>
+
+
+</ScrollView>
